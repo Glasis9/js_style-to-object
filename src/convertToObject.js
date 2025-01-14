@@ -9,8 +9,8 @@ function convertToObject(sourceString) {
   const arraySourceString = sourceString.split(';');
   const res = {};
 
-  for (let i = 0; i < arraySourceString.length; i++) {
-    const tempValue = arraySourceString[i].split(':');
+  for (const el of arraySourceString) {
+    const tempValue = el.split(':');
 
     if (tempValue.length !== 1) {
       res[tempValue[0].trim()] = tempValue[1].trim();
